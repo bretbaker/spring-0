@@ -1,4 +1,4 @@
-package com.spring0.spring0.scope;
+package com.spring0.spring0.componentscan;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class PersonDAO {
+public class ComponentDAO {
 
 	@Autowired
-	JdbcConnection jdbcConnection;
+	ComponentJdbcConnection jdbcConnection;
 
-	public JdbcConnection getJdbcConnection() {
+	public ComponentJdbcConnection getJdbcConnection() {
 		return jdbcConnection;
 	}
 
-	public void setJdbcConnection(JdbcConnection jdbcConnection) {
+	public void setJdbcConnection(ComponentJdbcConnection jdbcConnection) {
 		this.jdbcConnection = jdbcConnection;
 	}
 
